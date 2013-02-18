@@ -1,5 +1,3 @@
-#Setup with jar-download or maven pom
-
 = Project setup =
 
 GCMUtils must be added to the Android app project as a dependency.
