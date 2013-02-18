@@ -56,7 +56,8 @@ GCMUtils.createRegSender(Context context, String regId).send();
 and in the onRegistered method:
 {{{
 @Override
-protected void onRegistered(Context context, String regId) {  GCMUtils.createRegSender(GCMUtilsProperties.GCMUTILS.getReceiverUrl(), regId).send();
+protected void onRegistered(Context context, String regId) {
+  GCMUtils.createRegSender(GCMUtilsProperties.GCMUTILS.getReceiverUrl(), regId).send();
 }
 }}}
 
