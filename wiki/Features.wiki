@@ -10,7 +10,7 @@ The main features are:
 
 ----
 
-  * [#1_Setup 1 Setup]
+  * *[#1_Setup 1 Setup]*
   * [#2_GCMUtils_class 2 GCMUtils class]
   * [#2.1_Extended_check 2.1 Extended check]
   * [#2.2_Registration_id_handling 2.2 Registration id handling] 
