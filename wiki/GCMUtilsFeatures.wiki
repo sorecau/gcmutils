@@ -1,0 +1,33 @@
+#labels Featured
+= GCMUtils client usage =
+GCMUtils was created to make it easier to use GCM. It works in cooperation with the standard GCM classes, such as GCMRegistrar.
+
+The main features are:
+  * Registration id handling (both for registration and unregistration), that will automatically send a request to a server containing the registration id. Supports features such as exponential backoff.
+  * Extended verification of project with {{{GCMUtils.checkExtended(context)}}}. Verifies the GCM service created in the project.
+  * Uses the file _gcmutils.properties_ to make it easy to provide configuration options, such as _receiver-url_ and _sender-id_.
+  * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods, such as automatic registrationId handling.
+
+----
+
+==1. Setup==
+Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
+
+See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
+
+== 2. GCMUtils class ==
+The most important class is GCMUtils. It provides helper methods for the Android client. This section will provide more detailed information about these features, how they work and when they should be used.
+
+=== 2.1 Extended check ===
+The standard GCMRegistrar class provides two very useful methods that are used to verify that your project setup is correct. These are:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMRegistrar.checkManifest(this);
+}}}
+While these methods are very useful, they do not verify your service implementation. GCMUtils extends this, by offering the GCMUtils.checkExtended. It is useful during development and will first start by calling the GCMRegistrar.checkManifest-method. Then it will continue by doing a more extensive verification of your service class, that it exists and that it is a subclass of GCMBaseIntentService. The code should be added like this:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMUtils.checkExtended(this);
+}}}
+There is no need to call GCMRegistrar.checkManifest again, since this is done by GCMUtils for you. When you are installing the app on real devices (not in development mode) you should only include the GCMRegistrart.checkDevice method.
+ 
