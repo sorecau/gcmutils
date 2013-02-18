@@ -82,6 +82,18 @@ The callback variable (GCMSenderCallback) is an interface that will be called wh
 The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section [#2.2.2_GCMUtilsBaseIntentService 2.2.2] for more detailed information.
 
 ==== 2.2.2 GCMUtilsBaseIntentService ====
+The GCMUtilsBaseIntentService adds some helper methods to the standard GCMBaseIntentService class offered by GCM.
+GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
+{{{
+protected void onMessage(Context context, String msg) {
+}
+}}}
+By default this uses the key defined in the gcm-commons-utils:
+{{{
+GCMUtilsConstants.DATA_KEY_MSG
+}}}
+
+Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used with the _gcmutils.properties_ file, where the receiverUrl (the url to the server receiving the requests) is specified.
 
 
 ==== 2.2.3 Server receiving the registration id ====
