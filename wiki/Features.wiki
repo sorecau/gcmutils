@@ -10,7 +10,7 @@ The main features are:
 
 ----
 
-1. [#Setup Setup]
+1. [Setup#Setup]
 
 ----
 
