@@ -10,7 +10,7 @@ The main features are:
 
 ----
 
-1. [#1._Setup Setup]
+2. [#1._Setup Setup]<p/>
 2. [#2._GCMUtils_class GCMUtils class]
 
 ----
