@@ -4,6 +4,13 @@ GCMUtils was created to make it easier to use GCM. It works in cooperation with 
 The main features are:
   * Registration id handling (both for registration and unregistration), that will automatically send a request to a server containing the registration id. Supports features such as exponential backoff.
   * Extended verification of project with {{{GCMUtils.checkExtended(context)}}}. Verifies the GCM service created in the project.
-  * Uses a properties file _gcmutils.properties_ to make it easy to provide configuration options, such as _receiver-url_ and _sender-id_.
-  * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods. Such as automatic registrationId handling.
+  * Uses the file _gcmutils.properties_ to make it easy to provide configuration options, such as _receiver-url_ and _sender-id_.
+  * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods, such as automatic registrationId handling.
+
+----
+
+=Setup=
+Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
+
+See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
  
