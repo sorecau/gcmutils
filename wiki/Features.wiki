@@ -10,12 +10,12 @@ The main features are:
 
 ----
 
-1.    [#1_Setup Setup]<p/>
-2.    [#2_GCMUtils_class GCMUtils class]<p/>
-2.1   [#2.1_Extended_check Extended check]<p/>
-2.2   [#2.2_Registration_id_handling Registration id handling]<p/>
-2.2.1 [#2.2.1_Automatic_registration_id_request Automatic registration id request]<p/>
-2.2.2 [#2.2.2_GCMUtilsBaseIntentService GCMUtilsBaseIntentService]
+  * [#1_Setup 1. Setup]<p/>
+  * [#2_GCMUtils_class 2. GCMUtils class]<p/>
+  * [#2.1_Extended_check 2.1 Extended check]<p/>
+  * [#2.2_Registration_id_handling 2.2 Registration id handling]<p/> 
+  * [#2.2.1_Automatic_registration_id_request 2.2.1 Automatic registration id request]<p/>
+  * [#2.2.2_GCMUtilsBaseIntentService 2.2.2 GCMUtilsBaseIntentService]
 
 
 ----
