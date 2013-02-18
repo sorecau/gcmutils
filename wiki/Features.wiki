@@ -10,11 +10,11 @@ The main features are:
 
 ----
 
-1. [#setup setup]
+1. [#Setup Setup]
 
 ----
 
-==1. [Setup#setup]==
+==1. Setup==
 Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
