@@ -95,8 +95,9 @@ GCMUtilsConstants.DATA_KEY_MSG
 
 Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used with the _gcmutils.properties_ file, where the receiverUrl (the url to the server receiving the requests) is specified.
 
+==== 2.2.3
 
-==== 2.2.3 Server receiving the registration id ====
+==== 2.2.4 === *Server receiving the registration id*
 The request sent by the GCMSender is simply sending a POST request containing regId=_registrationId_.
 If you are writing your server in Java, you can add the gcm-commons-utils dependency to your project. This contains constants, which means you can read the regId and unregId by doing this:
 {{{
