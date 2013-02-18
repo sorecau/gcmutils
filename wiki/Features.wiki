@@ -10,18 +10,23 @@ The main features are:
 
 ----
 
-1. [#1._Setup Setup]<p/>
-2. [#2._GCMUtils_class GCMUtils class]
+1.    [#1_Setup Setup]<p/>
+2.    [#2_GCMUtils_class GCMUtils class]<p/>
+2.1   [#2.1_Extended_check Extended check]<p/>
+2.2   [#2.2_Registration_id_handling Registration id handling]<p/>
+2.2.1 [#2.2.1_Automatic_registration_id_request Automatic registration id request]<p/>
+2.2.2 [#2.2.2_GCMUtilsBaseIntentService GCMUtilsBaseIntentService]
+
 
 ----
 
-==1. Setup==
+==1 Setup==
 Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
 
 
-== 2. GCMUtils class ==
+== 2 GCMUtils class ==
 The most important class is GCMUtils. It provides helper methods for the Android client. This section will provide more detailed information about these features, how they work and when they should be used.
 
 === 2.1 Extended check ===
@@ -75,6 +80,9 @@ GCMUtils.getAndSendRegistrationId(context, callback)
 The callback variable (GCMSenderCallback) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
 
 The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section # for more detailed information.
+
+==== 2.2.2 GCMUtilsBaseIntentService ====
+
 
 ==== 2.2.3 Server receiving the registration id ====
 The request sent by the GCMSender is simply sending a POST request containing regId=_registrationId_.
