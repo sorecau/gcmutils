@@ -10,7 +10,8 @@ The main features are:
 
 ----
 
-1. [Setup #Setup]
+1. [#1._Setup Setup]
+2. [#2._GCMUtils_class GCMUtils class]
 
 ----
 
