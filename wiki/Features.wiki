@@ -16,7 +16,7 @@ The main features are:
   * [#2.2_Registration_id_handling 2.2 Registration id handling]<p/> 
   * [#2.2.1_Automatic_registration_id_request 2.2.1 Automatic registration id request]<p/>
   * [#2.2.2_GCMUtilsBaseIntentService 2.2.2 GCMUtilsBaseIntentService]
-
+  * [#2.2.3_Server_receiving_the_registration_id_2.2.3 Server receiving the registration id]
 
 ----
 
