@@ -12,3 +12,16 @@ GCMUtils.checkExtended(this);
 GCMUtils.getAndSendRegistrationId(this);
 }}}
   # Create a GCMIntentService class and extend GCMUtilsBaseIntentService. Implement the onMessage and onError methods (and if you need custom behavior you can also override the onregistered method).
+  # Implement a server that can receive registration ids and send messages. Example:
+{{{
+@Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  String msg = request.getParameter("msg");
+  if (regId != null) {
+    Sender sender = new Sender(apiKey);
+    Message message = new Message.Builder().addData(GCMUtilsConstants.DATA_KEY_MSG, msg).build();
+    Result result = sender.send(message, regId, 0);
+    logger.info("Push message result: {}", result);
+  }
+}
+}}}
