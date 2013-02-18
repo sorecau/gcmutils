@@ -33,3 +33,15 @@ GCMUtils.checkExtended(this);
 }}}
 There is no need to call GCMRegistrar.checkManifest again, since this is done by GCMUtils for you. When you are installing the app on real devices (not in development mode) you should only include the GCMRegistrart.checkDevice method.
  
+=== 2.2 Registration id handling ===
+By default GCM does not provide support for handling the registration id, which needs to be sent from the Android client to the server. GCMUtils adds support for automatic registration id handling. This can be done in a number of ways, depending on your requirements.
+
+==== 2.2.1 Automatic registration id request ====
+{{{
+GCMUtils.createRegSender(String receiverUrl, String regId).send();
+}}}
+or
+{{{
+GCMUtils.createRegSender(Context context, String regId).send();
+}}}
+Both of these methods will create a GCMSender instance for you. With the first method (taking two Strings) it will send it to the receiverUrl you specify. When providing the Context it will read the gcmutils.properties (placed in the assets folder) where you need to specify the _receiver-url_ property.
