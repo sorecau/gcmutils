@@ -27,6 +27,6 @@ Then add the required dependency:
 <dependency>
   <groupId>net.jarlehansen.android.gcm</groupId>
   <artifactId>gcm-client-utils</artifactId>
-  <version><latest-version></version>
+  <version>_latest-version_</version>
 </dependency>
 }}}
