@@ -18,10 +18,11 @@ The main features are:
   * [#2.2.2_GCMUtilsBaseIntentService 2.2.2 GCMUtilsBaseIntentService]
   * [#2.2.3_Custom_request_parameters 2.2.3 Custom request parameters]
   * [#2.2.4_Receiving_server 2.2.4 Receiving server]
+  * [#3_Source_code Source code]
 
 ----
 
-==1 Setup==
+== 1 Setup==
 Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
@@ -115,6 +116,6 @@ String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
 String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
 
-== Source code ==
+== 3 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
 Demo Android project: [https://github.com/jarlehansen/gcmutils/tree/master/gcm-client-sample]
