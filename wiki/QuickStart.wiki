@@ -1,0 +1,14 @@
+#summary Short and simple setup
+#labels QuickStart
+
+= Quick start =
+
+  # Complete step 1 and 3 in the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started guide].
+  # Download jar-files (gcm-client-utils and gcm-common-utils), or add them to your pom.xml.
+  # In your main activity, add the following code:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMUtils.checkExtended(this);
+GCMUtils.getAndSendRegistrationId(this);
+}}}
+  # Create a GCMIntentService class and extend GCMUtilsBaseIntentService. Implement the onMessage and onError methods (and if you need custom behavior you can also override the onregistered method).
