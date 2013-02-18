@@ -73,4 +73,4 @@ The callback variable (GCMSenderCallback) is an interface that will be called wh
 The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section # for more detailed information.
 
 ==== 2.2.3 Server receiving the registration id ====
-The request sent by the GCMSender is simply sending a POST request containing regId=[registrationId]. 
+The request sent by the GCMSender is simply sending a POST request containing regId=_registrationId_. 
