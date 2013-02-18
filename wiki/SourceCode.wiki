@@ -1,0 +1,11 @@
+#labels Featured
+= Source code =
+
+The GCMUtils source code is available at github: [https://github.com/jarlehansen/gcmutils]
+
+The following modules are included:
+|| gcm-client-sample || Simple Android project using GCMUtils ||
+|| gcm-client-utils || Main library jar-file ||
+|| gcm-client-utils-test || Tests for the gcm-client-utils ||
+|| gcm-common-utils || Constants used by the library, useful for both server (if Java) and client app ||
+|| gcm-manifest-utils || Work in progress, not read ||
