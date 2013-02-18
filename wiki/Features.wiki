@@ -60,6 +60,17 @@ protected void onRegistered(Context context, String regId) {
   GCMUtils.createRegSender(GCMUtilsProperties.GCMUTILS.getReceiverUrl(), regId).send();
 }
 }}}
+If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId method. This will handle the registration id process for you (no need to manually call GCMRegistrar.register, just add the following code:
+{{{
+GCMUtils.getAndSendRegistrationId(context);
+}}}
+or
+{{{
+GCMUtils.getAndSendRegistrationId(context, callback)
+}}}
+The callback variable (GCMSenderCallback) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
+
+The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section # for more detailed information.
 
 ==== 2.2.3 Server receiving the registration id ====
 The request sent by the GCMSender is simply sending a POST request containing regId=[registrationId]. 
