@@ -1,6 +1,4 @@
-#summary Short and simple setup
 #labels Featured
-
 = Quick start =
 
   # Complete step 1, 2 and 3 in the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started] guide.
