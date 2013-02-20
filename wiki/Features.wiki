@@ -74,7 +74,7 @@ or
 {{{
 GCMUtils.createRegSender(Context context, String regId).send();
 }}}
-Both of these methods will create a _GCMSender_ instance for you. With the first method (taking two Strings) it will send it to the receiverUrl you specify. When providing the _Context_ it will read the gcmutils.properties (placed in the assets folder) where you need to specify the _receiver-url_ property.
+Both of these methods will create a _GCMSender_ instance for you. With the first method (taking two Strings) it will send it to the receiverUrl you specify. When providing the _Context_ it will read the _gcmutils.properties_ (in the assets folder) where you need to specify the _receiver-url_ property.
 This method should be used where you receive the registration id from GCM. Typically this will be in the onCreate method:
 {{{
 String regId = GCMRegistrar.getRegistrationId(this);
