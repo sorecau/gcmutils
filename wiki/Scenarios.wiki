@@ -33,3 +33,80 @@ protected void onMessage(Context context, String msg) {
 protected void onError(Context context, String s) {
 }
 }}}
+
+----
+
+== "I need to customize the request sent and want to get the response" ==
+A more advanced case where you want to customize the content of the request sent during the registration and/or unregistration process. Additionally, you can register your own class to get a callback with the result of the requests sent.
+
+  # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
+  # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
+  # In you main activity, add the following code:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMUtils.checkExtended(this);
+
+String regId = GCMRegistrar.getRegistrationId(this);
+if ("".equals(regId))
+  GCMRegistrar.register(this, GCMUtilsProperties.GCMUTILS.getSenderId());
+else {
+  BasicNameValuePair regIdParam = new BasicNameValuePair(GCMUtilsConstants.PARAM_KEY_REGID, regId);
+  BasicNameValuePair myCustomParam = new BasicNameValuePair("my-key", "my-value");
+
+  GCMSender sender = GCMUtils.createSender(this, regIdParam, myCustomParam);
+  sender.setCallback(new MyCallback());
+  sender.send();
+}
+}}}
+  # Create your own callback class (in the above code its called MyCallback) and implement the GCMSenderCallback:
+{{{
+public class MyCallback implements GCMSenderCallback {
+  @Override
+  public void onRequestSent(GCMSenderResponse gcmSenderResponse) {
+  }
+}
+}}}
+  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_ (and optionally _request-backoff-millis_ and _request-retries_):
+{{{
+# Required
+receiver-url=http://10.0.2.2:10246
+sender-id=200712899552
+
+# optional
+# values: enabled/disabled
+check-extended=enabled
+request-backoff-millis=2000
+request-retries=5
+}}}
+  # Create a class called GCMIntentService and extend GCMBaseIntentService. Override the onMessage, onError, onRegistered and onUnregistered methods (This is just example code, obviously you do not want to duplicate the createSender-code in your own projects).
+{{{
+public class GCMIntentService extends GCMBaseIntentService {
+  @Override
+  protected void onMessage(Context context, Intent intent) {
+  }
+
+  @Override
+  protected void onRegistered(Context context, String regId) {
+    BasicNameValuePair regIdParam = new BasicNameValuePair(GCMUtilsConstants.PARAM_KEY_REGID, regId);
+    BasicNameValuePair myCustomParam = new BasicNameValuePair("my-reg-key", "my-value");
+
+    GCMSender sender = GCMUtils.createSender(this, regIdParam, myCustomParam);
+    sender.setCallback(new MyCallback());
+    sender.send();
+  }
+
+  @Override
+  protected void onUnregistered(Context context, String regId) {
+    BasicNameValuePair regIdParam = new BasicNameValuePair(GCMUtilsConstants.PARAM_KEY_UNREGID, regId);
+    BasicNameValuePair myCustomParam = new BasicNameValuePair("my-unreg-key", "my-value");
+
+    GCMSender sender = GCMUtils.createSender(this, regIdParam, myCustomParam);
+    sender.setCallback(new MyCallback());
+    sender.send();
+  }
+
+  @Override
+  protected void onError(Context context, String errorMsg) {
+  }
+}
+}}}
