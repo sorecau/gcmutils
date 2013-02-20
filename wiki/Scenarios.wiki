@@ -82,7 +82,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 }}}
 
 ----
-== Case 3: I need to customize the request sent and want to get the response ==
+== Case 3: I need to customize the request and want to receive the response ==
 A more advanced case where you want to customize the content of the request sent during the registration and/or unregistration process. Additionally, you can register your own class to get a callback with the result of the requests sent.
 
   # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
