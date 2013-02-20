@@ -23,9 +23,9 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#3.2_Registration_id_handling 3.2 Registration id handling]*
   * *[#3.2.1_Automatic_registration_id_request 3.2.1 Automatic registration id request]*
   * *[#3.2.2_Custom_request_parameters 3.2.2 Custom request parameters]*
-  * *[#3.2.3_Receiving_server 3.2.3 Receiving server]*
   * *[#4_GCMUtilsBaseIntentService 4 GCMUtilsBaseIntentService]*
-  * *[#5_Source_code 5 Source code]*
+  * *[#5_Receiving_server 5 Receiving server]*
+  * *[#6_Source_code 6 Source code]*
 
 ----
 
@@ -121,15 +121,6 @@ GCMUtils.createSender(context, new BasicNameValuePair("key1", "value1"), new Bas
 }}}
 You can send is as many _BasicNameValuePair_ instances as you need. These will then be sent to the specified server.
 
-==== 3.2.3 Receiving server ===
-The request sent by the _GCMSender_ consists of a simple POST request containing regId=_registrationId_.
-If you are writing your server in Java, you can add the gcm-commons-utils dependency to your project. This contains constants, which means you can read the regId and unregId by doing this:
-{{{
-String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
-String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
-}}}
-For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
-
 == 4 GCMUtilsBaseIntentService ==
 The GCMUtilsBaseIntentService adds a few helper methods to the standard _GCMBaseIntentService_ class offered by GCM.
 GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
@@ -144,8 +135,16 @@ GCMUtilsConstants.DATA_KEY_MSG
 
 Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used in combination with the _gcmutils.properties_ file, where the _receiver-url_ (url to the server receiving the requests) is specified.
 
+==== 5 Receiving server ===
+The request sent by the _GCMSender_ consists of a simple POST request containing regId=_registrationId_.
+If you are writing your server in Java, you can add the gcm-commons-utils dependency to your project. This contains constants, which means you can read the regId and unregId by doing this:
+{{{
+String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
+String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
+}}}
+For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
-== 5 Source code ==
+== 6 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
 
 Demo Android project: [https://github.com/jarlehansen/gcmutils/tree/master/gcm-client-sample]
