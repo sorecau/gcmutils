@@ -22,16 +22,31 @@ The main features are:
 
 ----
 
-== 1 Setup==
+== 1 Setup ==
 Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] guide. GCMUtils requires the same initial setup, with generation of the sender id (project id) and API key.
 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
 
+== 1 Configuration ==
+By default GCMUtils uses a properties file called gcmutils.properties. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes the Context object as input (for example: GCMUtils.createRegSender(context, regId)).
 
-== 2 GCMUtils class ==
+Available properties:
+{{{
+# Required
+receiver-url=http://...
+sender-id=
+
+# optional
+# values: enabled/disabled
+check-extended=enabled
+request-backoff-millis=2000
+request-retries=5
+}}}
+
+== 3 GCMUtils class ==
 The most important class is GCMUtils. It provides helper methods for the Android client. This section will provide more detailed information about these features, how they work and when they should be used.
 
-=== 2.1 Extended check ===
+=== 3.1 Extended check ===
 The standard GCMRegistrar class provides two very useful methods that are used to verify that your project setup is correct. These are:
 {{{
 GCMRegistrar.checkDevice(this);
@@ -44,10 +59,10 @@ GCMUtils.checkExtended(this);
 }}}
 There is no need to call GCMRegistrar.checkManifest again, since this is done by GCMUtils for you. When you are installing the app on real devices (not in development mode) you should only include the GCMRegistrart.checkDevice method. You can enable or disable the checkExtended in  _gcmutils.properties_ with the property: _check-extended=enabled_. If it does not find the check-extended property, it will use the _ApplicationInfo.FLAG_DEBUGGABLE_. If it is set to debuggable check extended will be executed, if not it will be skipped. More info on _[http://stackoverflow.com/questions/7022653/how-to-check-programmatically-whether-app-is-running-in-debug-mode-or-not ApplicationInfo.FLAG_DEBUGGABLE]_.
  
-=== 2.2 Registration id handling ===
+=== 3.2 Registration id handling ===
 By default GCM does not provide support for handling the registration id, which needs to be sent from the Android client to the server. GCMUtils adds support for automatic registration id handling. This can be done in a number of ways, depending on your requirements.
 
-==== 2.2.1 Automatic registration id request ====
+==== 3.2.1 Automatic registration id request ====
 {{{
 GCMUtils.createRegSender(String receiverUrl, String regId).send();
 }}}
@@ -81,9 +96,9 @@ GCMUtils.getAndSendRegistrationId(context, callback)
 }}}
 The callback variable (GCMSenderCallback) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
 
-The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section [#2.2.2_GCMUtilsBaseIntentService 2.2.2] for more detailed information.
+The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section [#3.2.2_GCMUtilsBaseIntentService 3.2.2] for more detailed information.
 
-==== 2.2.2 GCMUtilsBaseIntentService ====
+==== 3.2.2 GCMUtilsBaseIntentService ====
 The GCMUtilsBaseIntentService adds some helper methods to the standard GCMBaseIntentService class offered by GCM.
 GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
 {{{
@@ -97,7 +112,7 @@ GCMUtilsConstants.DATA_KEY_MSG
 
 Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used with the _gcmutils.properties_ file, where the receiverUrl (the url to the server receiving the requests) is specified.
 
-==== 2.2.3 Custom request parameters ====
+==== 3.2.3 Custom request parameters ====
 
 By default the methods _GCMUtils.createRegSender_ and _GCMUtils.createUnregSender_ will only send the registration id (with the key regId and unregId). If you need more request parameters you can use the GCMUtils.createSender method:
 {{{
@@ -108,7 +123,7 @@ or
 GCMUtils.createSender(context, new BasicNameValuePair("key1", "value1"), new BasicNameValuePair("key2", "value2"));
 }}}
 
-==== 2.2.4 Receiving server ===
+==== 3.2.4 Receiving server ===
 The request sent by the GCMSender is simply sending a POST request containing regId=_registrationId_.
 If you are writing your server in Java, you can add the gcm-commons-utils dependency to your project. This contains constants, which means you can read the regId and unregId by doing this:
 {{{
