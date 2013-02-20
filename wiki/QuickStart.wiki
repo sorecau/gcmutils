@@ -11,6 +11,16 @@ GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
 GCMUtils.getAndSendRegistrationId(this);
 }}}
+  # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, sender-id and check-extended:
+{{{
+# Required
+receiver-url=
+sender-id=
+
+# optional
+# values: enabled/disabled
+check-extended=enabled
+}}}
   # Create a GCMIntentService class and extend GCMUtilsBaseIntentService. Implement the onMessage and onError methods (if you need custom behavior you can also override the onRegistered method).
 {{{
 public class GCMIntentService extends GCMUtilsBaseIntentService {
