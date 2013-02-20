@@ -110,7 +110,7 @@ else {
   sender.send();
 }
 }}}
-  # Create your own callback class (in the above code its called MyCallback) and implement the GCMSenderCallback:
+  # Create your own callback class (in the above code its called _MyCallback_) and implement the _GCMSenderCallback_:
 {{{
 public class MyCallback implements GCMSenderCallback {
   @Override
@@ -121,8 +121,8 @@ public class MyCallback implements GCMSenderCallback {
   # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_ (and optionally _request-backoff-millis_ and _request-retries_):
 {{{
 # Required
-receiver-url=http://10.0.2.2:10246
-sender-id=200712899552
+receiver-url=
+sender-id=
 
 # optional
 # values: enabled/disabled
