@@ -23,7 +23,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#3.2_Registration_id_handling 3.2 Registration id handling]*
   * *[#3.2.1_Automatic_registration_id_request 3.2.1 Automatic registration id request]*
   * *[#3.2.2_Custom_request_parameters 3.2.2 Custom request parameters]*
-  * *[#4_GCMUtilsBaseIntentService 4 GCMUtilsBaseIntentService]*
+  * *[#4_GCMUtilsBaseIntentService_class 4 GCMUtilsBaseIntentService class]*
   * *[#5_Receiving_server 5 Receiving server]*
   * *[#6_Source_code 6 Source code]*
 
@@ -121,7 +121,7 @@ GCMUtils.createSender(context, new BasicNameValuePair("key1", "value1"), new Bas
 }}}
 You can send is as many _BasicNameValuePair_ instances as you need. These will then be sent to the specified server.
 
-== 4 GCMUtilsBaseIntentService ==
+== 4 GCMUtilsBaseIntentService class==
 The GCMUtilsBaseIntentService adds a few helper methods to the standard _GCMBaseIntentService_ class offered by GCM.
 GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
 {{{
