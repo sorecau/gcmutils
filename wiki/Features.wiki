@@ -130,7 +130,7 @@ String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
 For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
-==== 4 GCMUtilsBaseIntentService ====
+=== 4 GCMUtilsBaseIntentService ===
 The GCMUtilsBaseIntentService adds a few helper methods to the standard _GCMBaseIntentService_ class offered by GCM.
 GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
 {{{
