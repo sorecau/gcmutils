@@ -1,0 +1,25 @@
+= Scenarios =
+
+Examples of normal use of GCMUtils.
+
+== "I only need to send registration id" ==
+The simple case. You only need to send the registration id (both for registration and unregistration).
+
+  # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
+  # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
+  # In you main activity, add the following code:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMUtils.checkExtended(this);
+GCMUtils.getAndSendRegistrationId(this);
+}}}
+  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
+{{{
+# Required
+receiver-url=
+sender-id=
+
+# optional
+# values: enabled/disabled
+check-extended=enabled
+}}}
