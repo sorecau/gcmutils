@@ -131,7 +131,7 @@ GCMUtils.createSender(context, new BasicNameValuePair("key1", "value1"), new Bas
 You can send is as many _BasicNameValuePair_ instances as you need. These will then be sent to the specified server.
 
 ==== 3.2.4 Receiving server ===
-The request sent by the GCMSender is simply sending a POST request containing regId=_registrationId_.
+The request sent by the _GCMSender_ consists of a simple POST request containing regId=_registrationId_.
 If you are writing your server in Java, you can add the gcm-commons-utils dependency to your project. This contains constants, which means you can read the regId and unregId by doing this:
 {{{
 String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
