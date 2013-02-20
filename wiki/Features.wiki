@@ -30,7 +30,7 @@ Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
 
 == 2 Configuration ==
-By default GCMUtils uses a properties file called _gcmutils.properties_. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes the Context object as input (for example: GCMUtils.createRegSender(context, regId)).
+By default GCMUtils uses a properties file called _gcmutils.properties_. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes the Context object as input (for example: _GCMUtils.createRegSender(context, regId)_).
 
 Available properties:
 {{{
