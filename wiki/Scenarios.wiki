@@ -12,7 +12,7 @@ GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
 GCMUtils.getAndSendRegistrationId(this);
 }}}
-  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
+  # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
 {{{
 # Required
 receiver-url=
@@ -50,7 +50,7 @@ if ("".equals(regId))
 else
   GCMUtils.createRegSender(this, regId).send();
 }}}
-  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
+  # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
 {{{
 # Required
 receiver-url=
@@ -112,7 +112,7 @@ public class MyCallback implements GCMSenderCallback {
   }
 }
 }}}
-  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_ (and optionally _request-backoff-millis_ and _request-retries_):
+  # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_ (and optionally _request-backoff-millis_ and _request-retries_):
 {{{
 # Required
 receiver-url=http://10.0.2.2:10246
