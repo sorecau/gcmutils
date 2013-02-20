@@ -133,7 +133,7 @@ String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
 String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
 
-== 3 Source code ==
+== 4 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
 
 Demo Android project: [https://github.com/jarlehansen/gcmutils/tree/master/gcm-client-sample]
