@@ -4,7 +4,7 @@ GCMUtils must be added to the Android app project as a dependency. There are two
 
 *1. Direct project dependency*
 
-This can be done by simply downloading the jar-files (gcm-client-utils.jar and gcm-common-utils.jar) and adding them to your libs folder.
+This can be done by simply [https://code.google.com/p/gcmutils/downloads/list downloading the jar-files] (_gcm-client-utils.jar_ and _gcm-common-utils.jar_) and adding them to your libs folder.
 
 *2. Maven setup*
 
