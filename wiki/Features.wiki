@@ -116,7 +116,7 @@ By default this uses the key defined in the gcm-commons-utils:
 GCMUtilsConstants.DATA_KEY_MSG
 }}}
 
-Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used with the _gcmutils.properties_ file, where the receiverUrl (the url to the server receiving the requests) is specified.
+Additionally, the GCMUtilsBaseIntentService can handle the onRegistered and onUnregistered methods for you automatically. By extending the GCMUtilsBaseIntentService-class, it will automatically send regId and unregId to the configured server. This must be used in combination with the _gcmutils.properties_ file, where the _receiver-url- (url to the server receiving the requests) is specified.
 
 ==== 3.2.3 Custom request parameters ====
 
