@@ -11,7 +11,7 @@ GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
 GCMUtils.getAndSendRegistrationId(this);
 }}}
-  # Create a GCMIntentService class and extend GCMUtilsBaseIntentService. Implement the onMessage and onError methods (and if you need custom behavior you can also override the onregistered method).
+  # Create a GCMIntentService class and extend GCMUtilsBaseIntentService. Implement the onMessage and onError methods (if you need custom behavior you can also override the onRegistered method).
   # Implement a server that can receive registration ids and send messages.
 <br/>
 *Receive registration id example:*
