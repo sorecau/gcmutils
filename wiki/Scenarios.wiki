@@ -23,7 +23,6 @@ sender-id=
 # values: enabled/disabled
 check-extended=enabled
 }}}
-
   # Create a class called GCMIntentService and extend GCMUtilsBaseIntentService. Override the onError and onMessage methods:
 {{{
 @Override
