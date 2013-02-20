@@ -25,7 +25,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#3.2.3_Custom_request_parameters 3.2.2 Custom request parameters]*
   * *[#3.2.4_Receiving_server 3.2.3 Receiving server]*
   * *[#4_GCMUtilsBaseIntentService 4 GCMUtilsBaseIntentService]*
-  * *[#4_Source_code 4 Source code]*
+  * *[#5_Source_code 5 Source code]*
 
 ----
 
