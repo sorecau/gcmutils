@@ -137,6 +137,7 @@ If you are writing your server in Java, you can add the gcm-commons-utils depend
 String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
 String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
+For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
 == 4 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
