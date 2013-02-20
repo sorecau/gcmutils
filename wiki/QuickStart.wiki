@@ -4,7 +4,7 @@
 = Quick start =
 
   # Complete step 1, 2 and 3 in the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started] guide.
-  # Download jar-files (gcm-client-utils and gcm-common-utils), or add them to your pom.xml.
+  # [https://code.google.com/p/gcmutils/downloads/list Download jar-files] (gcm-client-utils and gcm-common-utils), or [https://code.google.com/p/gcmutils/wiki/ProjectSetup add them to your pom.xml].
   # In your main activity, add the following code:
 {{{
 GCMRegistrar.checkDevice(this);
