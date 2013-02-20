@@ -71,10 +71,14 @@ public class GCMIntentService extends GCMBaseIntentService {
 
   @Override
   protected void onRegistered(Context context, String regId) {
+    // Or write your custom logic
+    GCMUtils.createRegSender(context, regId).send();
   }
 
   @Override
   protected void onUnregistered(Context context, String regId) {
+    // Or write your custom logic
+     GCMUtils.createUnregSender(context, regId).send();
   }
 
   @Override
