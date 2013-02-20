@@ -105,7 +105,7 @@ If the request fails for some reason, GCMUtils will retry with an exponential ba
 The getAndSendRegistrationId-method is especially useful combined with the _GCMUtilsBaseIntentService_ class, see section [#3.2.2_GCMUtilsBaseIntentService 3.2.2] for more detailed information.
 
 ==== 3.2.2 GCMUtilsBaseIntentService ====
-The GCMUtilsBaseIntentService adds some helper methods to the standard GCMBaseIntentService class offered by GCM.
+The GCMUtilsBaseIntentService adds a few helper methods to the standard _GCMBaseIntentService_ class offered by GCM.
 GCMUtilsBaseIntentService includes a simplified method for receiving String messages, which will extract the message from intent for you:
 {{{
 protected void onMessage(Context context, String msg) {
