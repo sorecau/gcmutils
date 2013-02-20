@@ -14,13 +14,13 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#1_Setup 1 Setup]*
   * *[#2_Configuration 2 Configuration]*
   * *[#3_GCMUtils_class 3 GCMUtils class]*
-  * *[#3.1_Extended_check 2.1 Extended check]*
-  * *[#3.2_Registration_id_handling 2.2 Registration id handling]*
-  * *[#3.2.1_Automatic_registration_id_request 2.2.1 Automatic registration id request]*
-  * *[#3.2.2_GCMUtilsBaseIntentService 2.2.2 GCMUtilsBaseIntentService]*
-  * *[#3.2.3_Custom_request_parameters 2.2.3 Custom request parameters]*
-  * *[#3.2.4_Receiving_server 2.2.4 Receiving server]*
-  * *[#4_Source_code 3 Source code]*
+  * *[#3.1_Extended_check 3.1 Extended check]*
+  * *[#3.2_Registration_id_handling 3.2 Registration id handling]*
+  * *[#3.2.1_Automatic_registration_id_request 3.2.1 Automatic registration id request]*
+  * *[#3.2.2_GCMUtilsBaseIntentService 3.2.2 GCMUtilsBaseIntentService]*
+  * *[#3.2.3_Custom_request_parameters 3.2.3 Custom request parameters]*
+  * *[#3.2.4_Receiving_server 3.2.4 Receiving server]*
+  * *[#4_Source_code 4 Source code]*
 
 ----
 
