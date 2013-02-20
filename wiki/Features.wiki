@@ -8,8 +8,9 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * Extended verification of project with {{{GCMUtils.checkExtended(context)}}}. Verifies the GCM service created in the project.
   * Uses the _gcmutils.properties_ to make it easy to provide configuration options, such as _receiver-url_ and _sender-id_.
   * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods, such as automatic registrationId handling.
-<br/>
+
 ----
+
   * *[#1_Setup 1 Setup]*
   * *[#2_Configuration 2 Configuration]*
   * *[#3_GCMUtils_class 3 GCMUtils class]*
