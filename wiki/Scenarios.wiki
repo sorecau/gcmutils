@@ -2,12 +2,12 @@
 
 Examples of normal use of GCMUtils.
 
-== "I only need to send registration id" ==
+== Case 1: I only need to send registration id ==
 The simple case. You only need to send the registration id (both for registration and unregistration).
 
   # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
   # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
-  # In you main activity, add the following code:
+  # In you main activity onCreate-method, add the following code:
 {{{
 GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
@@ -35,13 +35,60 @@ protected void onError(Context context, String s) {
 }}}
 
 ----
+== Case 2: I want to write the registration logic ==
+Requires a bit more code than the simplest use case, but is still easy to set up.
 
-== "I need to customize the request sent and want to get the response" ==
+  # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
+  # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
+  # In you main activity onCreate-method, add the following code:
+{{{
+GCMRegistrar.checkDevice(this);
+GCMUtils.checkExtended(this);
+
+String regId = GCMRegistrar.getRegistrationId(this);
+if ("".equals(regId))
+  GCMRegistrar.register(this, GCMUtilsProperties.GCMUTILS.getSenderId());
+else
+  GCMUtils.createRegSender(this, regId).send();
+}}}
+  # Add the gcmutils.properties in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
+{{{
+# Required
+receiver-url=
+sender-id=
+
+# optional
+# values: enabled/disabled
+check-extended=enabled
+}}}
+  # Create a class called GCMIntentService and extend GCMBaseIntentService. Override the onMessage, onError, onRegistered and onUnregistered methods methods:
+{{{
+public class GCMIntentService extends GCMBaseIntentService {
+  @Override
+  protected void onMessage(Context context, Intent intent) {
+  }
+
+  @Override
+  protected void onRegistered(Context context, String regId) {
+  }
+
+  @Override
+  protected void onUnregistered(Context context, String regId) {
+  }
+
+  @Override
+  protected void onError(Context context, String errorMsg) {
+  }
+}
+}}}
+
+----
+== Case 3: I need to customize the request sent and want to get the response ==
 A more advanced case where you want to customize the content of the request sent during the registration and/or unregistration process. Additionally, you can register your own class to get a callback with the result of the requests sent.
 
   # Add gcm-client-utils.jar and gcm-common-utils.jar to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
   # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
-  # In you main activity, add the following code:
+  # In you main activity onCreate-method, add the following code:
 {{{
 GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
