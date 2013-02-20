@@ -54,7 +54,7 @@ The standard GCMRegistrar class provides two very useful methods that are used t
 GCMRegistrar.checkDevice(this);
 GCMRegistrar.checkManifest(this);
 }}}
-While these methods are very useful, they do not verify your service implementation. GCMUtils extends this, by offering the GCMUtils.checkExtended. It is useful during development and will first start by calling the GCMRegistrar.checkManifest-method. Then it will continue by doing a more extensive verification of your service class, that it exists and that it is a subclass of GCMBaseIntentService. The code should be added like this:
+While these methods are very useful, they do not verify your service implementation. GCMUtils extends this, by offering the _GCMUtils.checkExtended_. It is useful during development and will first start by calling the GCMRegistrar.checkManifest-method. Then it will continue by doing a more extensive verification of your service class, that it exists and that it is a subclass of GCMBaseIntentService. The code should be added like this:
 {{{
 GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
