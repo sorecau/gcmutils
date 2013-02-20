@@ -1,7 +1,6 @@
 = Scenarios =
-
-Examples of normal use of GCMUtils.
-
+Common scenarios for using GCMUtils.
+<br/>
 == Case 1: I only need to send registration id ==
 The simple case. You only need to send the registration id (both for registration and unregistration).
 
