@@ -100,6 +100,8 @@ GCMUtils.getAndSendRegistrationId(context, callback)
 }}}
 The callback variable (_GCMSenderCallback_) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
 
+If the request fails for some reason, GCMUtils will retry with an exponential backoff. By default this is set to 2000ms and it will retry 5 times. You can changes these values in _gcmutils.properties_. After the request is finished, regardless of whether it was successful or not, a callback is sent to the registered class with the response (_GCMSenderResponse_ class).
+
 The getAndSendRegistrationId-method is especially useful combined with the _GCMUtilsBaseIntentService_ class, see section [#3.2.2_GCMUtilsBaseIntentService 3.2.2] for more detailed information.
 
 ==== 3.2.2 GCMUtilsBaseIntentService ====
