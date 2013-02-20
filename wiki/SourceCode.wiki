@@ -3,7 +3,7 @@
 
 The GCMUtils source code is available at github: [https://github.com/jarlehansen/gcmutils]
 
-The following modules are included:
+*The following modules are included:*
 || gcm-client-sample || Simple Android project using GCMUtils ||
 || gcm-client-utils || Main library jar-file ||
 || gcm-client-utils-test || Tests for the gcm-client-utils ||
