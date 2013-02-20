@@ -9,7 +9,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * Uses the _gcmutils.properties_ to make it easy to provide configuration options, such as _receiver-url_ and _sender-id_.
   * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods, such as automatic registrationId handling.
 
-*Requirements*
+*Requirements:*
   * Android 2.2 or newer
   * gcm-client jar-file
   * Java 1.6 or newer
