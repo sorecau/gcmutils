@@ -90,7 +90,7 @@ protected void onRegistered(Context context, String regId) {
   GCMUtils.createRegSender(GCMUtilsProperties.GCMUTILS.getReceiverUrl(), regId).send();
 }
 }}}
-If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId method. This will handle the registration id process for you (no need to manually call GCMRegistrar.register, just add the following code:
+If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId-method. This will handle the registration id process for you (no need to manually call _GCMRegistrar.register_), just add the following code:
 {{{
 GCMUtils.getAndSendRegistrationId(context);
 }}}
@@ -98,9 +98,9 @@ or
 {{{
 GCMUtils.getAndSendRegistrationId(context, callback)
 }}}
-The callback variable (GCMSenderCallback) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
+The callback variable (_GCMSenderCallback_) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
 
-The getAndSendRegistrationId-method is especially useful combined with the GCMUtilsBaseIntentService class, see section [#3.2.2_GCMUtilsBaseIntentService 3.2.2] for more detailed information.
+The getAndSendRegistrationId-method is especially useful combined with the _GCMUtilsBaseIntentService_ class, see section [#3.2.2_GCMUtilsBaseIntentService 3.2.2] for more detailed information.
 
 ==== 3.2.2 GCMUtilsBaseIntentService ====
 The GCMUtilsBaseIntentService adds some helper methods to the standard GCMBaseIntentService class offered by GCM.
