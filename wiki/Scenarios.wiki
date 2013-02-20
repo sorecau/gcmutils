@@ -22,7 +22,7 @@ sender-id=
 # values: enabled/disabled
 check-extended=enabled
 }}}
-  # Create a class called GCMIntentService and extend GCMUtilsBaseIntentService. Override the onError and onMessage methods:
+  # Create a class called _GCMIntentService_ and extend _GCMUtilsBaseIntentService_. Override the _onError_ and _onMessage_ methods:
 {{{
 @Override
 protected void onMessage(Context context, String msg) {
@@ -60,7 +60,7 @@ sender-id=
 # values: enabled/disabled
 check-extended=enabled
 }}}
-  # Create a class called GCMIntentService and extend GCMBaseIntentService. Override the onMessage, onError, onRegistered and onUnregistered methods methods:
+  # Create a class called _GCMIntentService_ and extend _GCMBaseIntentService_. Override the _onMessage_, _onError_, _onRegistered_ and _onUnregistered_ methods:
 {{{
 public class GCMIntentService extends GCMBaseIntentService {
   @Override
@@ -124,7 +124,7 @@ check-extended=enabled
 request-backoff-millis=2000
 request-retries=5
 }}}
-  # Create a class called GCMIntentService and extend GCMBaseIntentService. Override the onMessage, onError, onRegistered and onUnregistered methods (This is just example code, obviously you do not want to duplicate the createSender-code in your own projects).
+  # Create a class called _GCMIntentService_ and extend _GCMBaseIntentService_. Override the _onMessage_, _onError_, _onRegistered_ and _onUnregistered_ methods (This is just example code, obviously you do not want to duplicate the createSender-code in your own projects).
 {{{
 public class GCMIntentService extends GCMBaseIntentService {
   @Override
