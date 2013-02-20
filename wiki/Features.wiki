@@ -11,16 +11,16 @@ The main features are:
 
 ----
 
-  * *[#1_Setup 1 Setup]*
-  * *[#2_Configuration 2 Configuration]*
-  * *[#3_GCMUtils_class 3 GCMUtils class]*
-  * *[#2.1_Extended_check 2.1 Extended check]*
-  * *[#2.2_Registration_id_handling 2.2 Registration id handling]*
-  * *[#2.2.1_Automatic_registration_id_request 2.2.1 Automatic registration id request]*
-  * *[#2.2.2_GCMUtilsBaseIntentService 2.2.2 GCMUtilsBaseIntentService]*
-  * *[#2.2.3_Custom_request_parameters 2.2.3 Custom request parameters]*
-  * *[#2.2.4_Receiving_server 2.2.4 Receiving server]*
-  * *[#3_Source_code 3 Source code]*
+  * *[#1_Setup 1    Setup]*
+  * *[#2_Configuration 2    Configuration]*
+  * *[#3_GCMUtils_class 3    GCMUtils class]*
+  * *[#2.1_Extended_check 2.1   Extended check]*
+  * *[#2.2_Registration_id_handling 2.2   Registration id handling]*
+  * *[#2.2.1_Automatic_registration_id_request 2.2.1  Automatic registration id request]*
+  * *[#2.2.2_GCMUtilsBaseIntentService 2.2.2  GCMUtilsBaseIntentService]*
+  * *[#2.2.3_Custom_request_parameters 2.2.3  Custom request parameters]*
+  * *[#2.2.4 _Receiving_server 2.2.4 Receiving server]*
+  * *[#3_Source_code 3    Source code]*
 
 ----
 
