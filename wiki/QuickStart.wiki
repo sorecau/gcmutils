@@ -35,8 +35,8 @@ public class GCMIntentService extends GCMUtilsBaseIntentService {
 }}}
   # Implement a server that can receive registration ids and send messages.
 The default request parameters have the following format (key=value):
-  * regId=_'['registration id']'_
-  * unregId=_'['registration id']'_
+  * regId=_`[`registration id`]`_
+  * unregId=_`[`registration id`]`_
 <br/>
 *(Server code) receive registration id example:*
 {{{
