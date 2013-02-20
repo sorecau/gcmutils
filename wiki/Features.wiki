@@ -11,7 +11,8 @@ The main features are:
 ----
 
   * *[#1_Setup 1 Setup]*
-  * *[#2_GCMUtils_class 2 GCMUtils class]*
+  * *[#2_Configuration 2 Configuration]*
+  * *[#3_GCMUtils_class 3 GCMUtils class]*
   * *[#2.1_Extended_check 2.1 Extended check]*
   * *[#2.2_Registration_id_handling 2.2 Registration id handling]*
   * *[#2.2.1_Automatic_registration_id_request 2.2.1 Automatic registration id request]*
@@ -27,7 +28,7 @@ Read the [http://developer.android.com/google/gcm/gs.html GCM: Getting Started] 
 
 See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page] for more info on how to include GCMUtils in your project.
 
-== 1 Configuration ==
+== 2 Configuration ==
 By default GCMUtils uses a properties file called gcmutils.properties. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes the Context object as input (for example: GCMUtils.createRegSender(context, regId)).
 
 Available properties:
