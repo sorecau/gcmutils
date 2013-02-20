@@ -33,7 +33,8 @@ public class GCMIntentService extends GCMUtilsBaseIntentService {
   }
 }
 }}}
-  # Implement a server that can receive registration ids and send messages. The default parameters sent have the following format (key=value):
+  # Implement a server that can receive registration ids and send messages.
+The default parameters sent have the following format (key=value):
   * regId=_registration id_
   * unregId=_registration id_
 <br/>
