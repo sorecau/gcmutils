@@ -24,12 +24,14 @@ check-extended=enabled
 }}}
   # Create a class called _GCMIntentService_ and extend _GCMUtilsBaseIntentService_. Override the _onError_ and _onMessage_ methods:
 {{{
-@Override
-protected void onMessage(Context context, String msg) {
-}
+public class GCMIntentService extends GCMUtilsBaseIntentService {
+  @Override
+  protected void onMessage(Context context, String msg) {
+  }
 
-@Override
-protected void onError(Context context, String s) {
+  @Override
+  protected void onError(Context context, String s) {
+  }
 }
 }}}
 <br/>
