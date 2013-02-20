@@ -10,7 +10,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * An alternative base intent service _GCMUtilsBaseIntentService_, that includes a few helper methods, such as automatic registrationId handling.
 
 ----
-
+<br/>
   * *[#1_Setup 1 Setup]*
   * *[#2_Configuration 2 Configuration]*
   * *[#3_GCMUtils_class 3 GCMUtils class]*
