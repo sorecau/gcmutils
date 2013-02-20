@@ -22,8 +22,8 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#3.1_Extended_check 3.1 Extended check]*
   * *[#3.2_Registration_id_handling 3.2 Registration id handling]*
   * *[#3.2.1_Automatic_registration_id_request 3.2.1 Automatic registration id request]*
-  * *[#3.2.3_Custom_request_parameters 3.2.2 Custom request parameters]*
-  * *[#3.2.4_Receiving_server 3.2.3 Receiving server]*
+  * *[#3.2.2_Custom_request_parameters 3.2.2 Custom request parameters]*
+  * *[#3.2.3_Receiving_server 3.2.3 Receiving server]*
   * *[#4_GCMUtilsBaseIntentService 4 GCMUtilsBaseIntentService]*
   * *[#5_Source_code 5 Source code]*
 
