@@ -1,5 +1,5 @@
 #summary Short and simple setup
-#labels QuickStart
+#labels Featured
 
 = Quick start =
 
