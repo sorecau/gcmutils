@@ -58,4 +58,4 @@ Result result = sender.send(message, regId, 0);
 logger.info("Push message result: {}", result);
 }}}
 
-For more information, see the [https://code.google.com/p/gcmutils/wiki/Features features-page].
+For more information, see the [https://code.google.com/p/gcmutils/wiki/Features features page].
