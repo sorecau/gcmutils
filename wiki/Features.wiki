@@ -90,7 +90,7 @@ protected void onRegistered(Context context, String regId) {
   GCMUtils.createRegSender(GCMUtilsProperties.GCMUTILS.getReceiverUrl(), regId).send();
 }
 }}}
-If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId-method. This will handle the registration id process for you (no need to manually call _GCMRegistrar.register_), just add the following code:
+If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId-method. This will handle the registration id process for you (no need to manually call _GCMRegistrar.register()_), just add the following code:
 {{{
 GCMUtils.getAndSendRegistrationId(context);
 }}}
