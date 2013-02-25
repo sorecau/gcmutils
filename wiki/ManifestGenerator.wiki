@@ -64,4 +64,4 @@ If you have a standard Android maven setup you do not need to add any configurat
 java -jar gcmutils-main.jar AndroidManifest.xml my.package.name
 }}}
 
-If you want to skip the creation of the backup-file, add the system property _-DskipBackup=true_.
+If you want to skip the creation of the backup-file, add the system property _-`DskipBackup`=true_.
