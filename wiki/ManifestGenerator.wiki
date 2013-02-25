@@ -6,7 +6,7 @@ With the GCMUtils manifest generator you can automatically generate the required
 There are two main ways to use the manifest generator:
 
   # *[#1._Maven_plugin Maven plugin]*
-  # *[#2.Java_application Java application]*
+  # *[#2._Java_application Java application]*
 
 ----
 
