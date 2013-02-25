@@ -32,7 +32,7 @@ There are two main ways to use the manifest generator:
     <plugin>
       <groupId>net.jarlehansen.android.gcm.plugins</groupId>
       <artifactId>gcmutils-maven-plugin</artifactId>
-      <version>${project.parent.version}</version>
+      <version>LATEST_VERSION</version>
         <configuration>
           <manifestPath>my-folder/AndroidManifest.xml</manifestPath> <!-- Optional -->
           <skipBackup>true</skipBackup> <!-- Optional -->
