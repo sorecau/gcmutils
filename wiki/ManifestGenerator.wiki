@@ -41,13 +41,15 @@ There are two main ways to use the manifest generator:
     </plugins>
   </build>
 }}}
-*Configuration values:*
-|| manifestPath || the path to your manifest-file. Default = AndroidManifest.xml. ||
-|| skipBackup || If set to true, no backup-file is created. Default = false. ||
   # Execute the following command to run the plugin:
 {{{
   mvn gcmutils:manifest
 }}}
+
+
+*Configuration values:*
+|| manifestPath || the path to your manifest-file. Default = AndroidManifest.xml. ||
+|| skipBackup || If set to true, no backup-file is created. Default = false. ||
 
 By default (the skipBackup configuration) the gcmutils-maven-plugin will automatically create a backup file, called AndroidManifest-backup.xml. If anything wrong happens, you will still have your original AndroidManifest.xml-file available. It is recommended to keep the backup-feature enabled, if everything is generated successfully you can delete the backup-file.
 
