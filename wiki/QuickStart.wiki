@@ -1,7 +1,9 @@
 #labels Featured
 = Quick start =
 
-  # Complete step 1, 2 and 3 in the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started] guide.
+For more detailed information about standard GCM, see the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started] guide.
+
+  # Complete step 1, 2 and 3 in.
   # [https://code.google.com/p/gcmutils/downloads/list Download jar-files] (gcm-client-utils and gcm-common-utils) or [https://code.google.com/p/gcmutils/wiki/ProjectSetup add them to your pom.xml].
   # In your main activity, add the following code:
 {{{
