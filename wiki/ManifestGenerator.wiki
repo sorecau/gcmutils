@@ -5,8 +5,8 @@ With the GCMUtils manifest generator you can automatically generate the required
 
 There are two main ways to use the manifest generator:
 
-  # Maven plugin
-  # Java application
+  # *[#1._Maven_plugin Maven plugin]*
+  # *[#2.Java_application Java application]*
 
 ----
 
@@ -40,7 +40,7 @@ There are two main ways to use the manifest generator:
         </plugins>
     </build>
 }}}
-Configuration values:
+*Configuration values:*
 || manifestPath || the path to your manifest-file. Default = AndroidManifest.xml. ||
 || skipBackup || If set to true, no backup-file is created. Default = false. ||
 
@@ -50,7 +50,7 @@ If you have a standard Android maven setup you do not need to add any configurat
 
 ----
 
-==Java application==
+==2. Java application==
   # Download the gcmutils-maven.jar from [http://code.google.com/p/gcmutils/downloads/list Downloads].
   # To generate the manifest tags, run the command:
 {{{
