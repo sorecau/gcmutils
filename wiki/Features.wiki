@@ -26,7 +26,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#4_GCMUtilsBaseIntentService_class 4 GCMUtilsBaseIntentService class]*
   * *[#5_Receiving_server 5 Receiving server]*
   * *[#6_GCMUtils_AndroidManifest_generator 6 GCMUtils AndroidManifest generator]*
-  * *[#6_Source_code 6 Source code]*
+  * *[#7_Source_code 6 Source code]*
 
 ----
 
