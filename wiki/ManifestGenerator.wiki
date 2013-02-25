@@ -1,7 +1,8 @@
 #labels Featured
 = GCMUtils AndroidManifest generator =
+One of the more error-prone and tedious tasks of creating a GCM project is to add the correct manifest entries. The GCMUtils AndroidManifest generator is created to make this process fast and simple.
 
-With the GCMUtils manifest generator you can automatically generate the required manifest entries for a GCM app.
+The manifest generator will automatically generate the required manifest entries for a GCM app.
 
 There are two main ways to use the manifest generator:
 
