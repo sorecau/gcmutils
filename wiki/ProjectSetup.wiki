@@ -13,14 +13,16 @@ Include the Google code repositories in your pom.xml file:
 {{{
 <repositories>
   <repository>
-  <id>gcmutils-repo-releases</id>
-  <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
-</repository>
-<repository>
-  <id>gcmutils-repo-snapshots</id>
-  <url>http://gcmutils.googlecode.com/svn/trunk/repository/snapshots</url>
+    <id>gcmutils-repo-releases</id>
+    <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
   </repository>
 </repositories>
+<pluginRepositories>
+  <pluginRepository>
+    <id>gcmutils-repo-releases</id>
+    <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
+  </pluginRepository>
+</pluginRepositories>
 }}}
 
 Then add the required dependency:
@@ -31,3 +33,5 @@ Then add the required dependency:
   <version>LATEST_VERSION</version>
 </dependency>
 }}}
+
+If you want to use the gcmutils-maven-plugin to generate the required tags in AndroidManifest.xml, go to the [http://code.google.com/p/gcmutils/wiki/ManifestGenerator ManifestGenerator-page]
