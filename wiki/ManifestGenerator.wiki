@@ -1,0 +1,49 @@
+#labels Featured
+= GCMUtils AndroidManifest generator =
+
+With the GCMUtils manifest generator you can automatically generate the required manifest entries for a GCM app.
+
+There are two main ways to use the manifest generator:
+
+  # Maven plugin
+  # Java application
+
+----
+
+== Maven plugin ==
+  # Include the Google code repositories in you pom.xml
+{{{
+<repositories>
+  <repository>
+  <id>gcmutils-repo-releases</id>
+  <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
+</repository>
+<repository>
+  <id>gcmutils-repo-snapshots</id>
+  <url>http://gcmutils.googlecode.com/svn/trunk/repository/snapshots</url>
+  </repository>
+</repositories>
+}}}
+  # Add the following plugin-tag:
+{{{
+<build>
+        <plugins>
+            <plugin>
+                <groupId>net.jarlehansen.android.gcm.plugins</groupId>
+                <artifactId>gcmutils-maven-plugin</artifactId>
+                <version>${project.parent.version}</version>
+                <configuration>
+                    <manifestPath>my-folder/AndroidManifest.xml</manifestPath> <!-- Optional -->
+                    <skipBackup>true</skipBackup> <!-- Optional -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+}}}
+Configuration values:
+|| manifestPath || the path to your manifest-file. Default = AndroidManifest.xml. ||
+|| skipBackup || If set to true, no backup-file is created. Default = false. ||
+
+By default (the skipBackup configuration) the gcmutils-maven-plugin will automatically create a backup file, called AndroidManifest-backup.xml. If anything wrong happens, you will still have your original AndroidManifest.xml-file available. It is recommended to keep the backup-feature enabled, if everything is generated successfully you can delete the backup-file.
+
+If you have a standard Android maven setup you do not need to add any configuration-options.
