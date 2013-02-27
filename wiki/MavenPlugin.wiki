@@ -42,9 +42,9 @@ Execute the following command to run the plugin:
 {{{
 mvn gcmutils:gcmify
 }}}
-*Configuration values:*
-|| manifestPath || the path to your manifest-file. Default = `AndroidManifest.xml`. ||
-|| skipBackup || If set to true, no backup-file is created. Default = false.||
+====Configuration values:====
+|| *manifestPath* || the path to your manifest-file. Default = `AndroidManifest.xml`. ||
+|| *skipBackup* || If set to true, no backup-file is created. Default = false.||
 
 By default (the skipBackup configuration) the gcmutils-maven-plugin will automatically create a backup file, called `AndroidManifest-backup.xml`. If anything wrong happens, you will still have your original `AndroidManifest.xml`-file available. It is recommended to keep the backup-feature enabled, if everything is generated successfully you can delete the backup-file.
 
@@ -71,7 +71,7 @@ To start the test server execute the following command:
 mvn gcmutils:run-server
 }}}
 
-*Configuration values*
-|| apiKey || The API key is created in [https://code.google.com/apis/console/ Google APIs console] and is used when sending messages to the registered devices. <br/> It is recommended to add the apiKey value to either a system property when running the command (_gcmutils:run-server `-DapiKey`=_) or in the .m2/settings.xml file ||
-|| port || The port number that the server will run on. Default = 9595 ||
-|| contextRoot || The context root of the webapp. Default = "/" ||
+====Configuration values====
+|| *apiKey* || The API key is created in [https://code.google.com/apis/console/ Google APIs console] and is used when sending messages to the registered devices. <br/> It is recommended to add the apiKey value to either a system property when running the command (_gcmutils:run-server `-DapiKey`=_) or in the .m2/settings.xml file ||
+|| *port* || The port number that the server will run on. Default = 9595 ||
+|| *contextRoot* || The context root of the webapp. Default = "/" ||
