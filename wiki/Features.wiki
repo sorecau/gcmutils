@@ -113,7 +113,7 @@ There is also a standard method available for sending the registration id and th
 GCMUtils.getAndSendRegIdAndEmail(context);
 }}}
 
-The same methods are available for the unregister-process. For example:
+The same registration id handling methods are available for the unregister-process. For example:
 {{{
 GCMUtils.createUnregSender(context);
 }}}
