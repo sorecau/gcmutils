@@ -146,7 +146,7 @@ String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
 == 6 GCMUtils maven plugin ==
-The gcmutils-maven-plugin provides two main features: 1) manifest generator and 2) test server. [https://code.google.com/p/gcmutils/wiki/MavenPlugin More info].
+The gcmutils-maven-plugin provides two main features: 1) [https://code.google.com/p/gcmutils/wiki/MavenPlugin#Manifest_generator manifest generator] and 2) [https://code.google.com/p/gcmutils/wiki/MavenPlugin#Test_server test server]. [https://code.google.com/p/gcmutils/wiki/MavenPlugin More info].
 
 == 7 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
