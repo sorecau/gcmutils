@@ -121,7 +121,7 @@ GCMUtils.createUnregSender(context);
 
 If the request fails for some reason, GCMUtils will retry with an exponential backoff. By default this is set to 2000ms and it will retry 5 times. You can changes these values in _gcmutils.properties_. After the request is finished, regardless of whether it was successful or not, a callback is sent to the registered class with the response (_GCMSenderResponse_).
 
-The getAndSendRegistrationId-method is especially useful combined with the _GCMUtilsBaseIntentService_ class, see section [#4_GCMUtilsBaseIntentService 4 GCMUtilsBaseIntentService] for more detailed information.
+The getAndSendRegistrationId-method is especially useful combined with the _GCMUtilsBaseIntentService_ class, see section [#4_GCMUtilsBaseIntentService_class 4 GCMUtilsBaseIntentService] for more detailed information.
 
 ==== 3.2.2 Custom request parameters ====
 
