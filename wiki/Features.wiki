@@ -40,7 +40,7 @@ Also see the [https://github.com/akquinet/android-archetypes android-gcm-quickst
 == 2 Configuration ==
 By default GCMUtils uses a properties file called _gcmutils.properties_. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes a Context object as input (for example: _GCMUtils.createRegSender(context, regId)_).
 
-Available properties:
+*Available properties:*
 {{{
 # Required
 receiver-url=http://...
