@@ -98,13 +98,19 @@ protected void onRegistered(Context context, String regId) {
 }}}
 If you only want to send the registration id and not any other request parameters, you can also use the getAndSendRegistrationId-method. This will handle the registration id process for you (no need to manually call _GCMRegistrar.register()_), just add the following code:
 {{{
-GCMUtils.getAndSendRegistrationId(context);
+GCMUtils.getAndSendRegId(context);
 }}}
 or
 {{{
-GCMUtils.getAndSendRegistrationId(context, callback)
+GCMUtils.getAndSendRegId(context, callback)
 }}}
 The callback variable (_GCMSenderCallback_) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
+
+There is also a standard method available for sending the registered e-mail account on the device and the registration id:
+{{{
+GCMUtils.getAndSendRegIdAndEmail(context);
+}}}
+
 
 If the request fails for some reason, GCMUtils will retry with an exponential backoff. By default this is set to 2000ms and it will retry 5 times. You can changes these values in _gcmutils.properties_. After the request is finished, regardless of whether it was successful or not, a callback is sent to the registered class with the response (_GCMSenderResponse_).
 
