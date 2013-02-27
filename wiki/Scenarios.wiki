@@ -10,7 +10,7 @@ The simple case. You only need to send the registration id (both for registratio
 {{{
 GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
-GCMUtils.getAndSendRegistrationId(this);
+GCMUtils.getAndSendRegId(this);
 }}}
   # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, _sender-id_ and _check-extended_:
 {{{
