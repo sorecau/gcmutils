@@ -72,6 +72,6 @@ mvn gcmutils:run-server
 }}}
 
 *Configuration values*
-|| apiKey || The API key is created in [https://code.google.com/apis/console/ Google APIs console] and is used when sending messages to the registered devices. &nbsp; It is recommended to add the apiKey value to either a system property when running the command (_gcmutils:run-server `-DapiKey`=_) or in the .m2/settings.xml file ||
+|| apiKey || The API key is created in [https://code.google.com/apis/console/ Google APIs console] and is used when sending messages to the registered devices. <br/> It is recommended to add the apiKey value to either a system property when running the command (_gcmutils:run-server `-DapiKey`=_) or in the .m2/settings.xml file ||
 || port || The port number that the server will run on. Default = 9595 ||
 || contextRoot || The context root of the webapp. Default = "/" ||
