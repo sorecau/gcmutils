@@ -17,9 +17,14 @@ To include the gcmutils-maven-plugin in your own project, add the following:
   <artifactId>gcmutils-maven-plugin</artifactId>
   <version>LATEST_VERSION</version>
   <configuration>
+    <!-- Manifest generator config -->
     <manifestPath>my-folder/AndroidManifest.xml</manifestPath> <!-- Optional -->
     <skipBackup>true</skipBackup> <!-- Optional -->
-  <!-- <apiKey></apiKey> Should be included as System property or in .m2/settings.xml -->
+
+    <!-- Test server config -->
+    <port>8080</port> <!-- Optional -->
+    <contextRoot>/myServer</contextRoot> <!-- Optional -->
+    <!-- <apiKey></apiKey> Should be included as System property or in .m2/settings.xml -->
   </configuration>
 </plugin>
 }}}
