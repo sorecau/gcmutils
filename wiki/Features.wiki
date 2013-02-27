@@ -108,9 +108,14 @@ GCMUtils.getAndSendRegId(context, callback)
 }}}
 The callback variable (_GCMSenderCallback_) is an interface that will be called when the request has been sent. This is where you can add your own implementation to get the status of the request sent.
 
-There is also a standard method available for sending the registered e-mail account on the device and the registration id:
+There is also a standard method available for sending the registration id and the registered e-mail account on the device:
 {{{
 GCMUtils.getAndSendRegIdAndEmail(context);
+}}}
+
+The same methods are available for the unregister-process. For example:
+{{{
+GCMUtils.createUnregSender(context);
 }}}
 
 
