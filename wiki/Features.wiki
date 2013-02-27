@@ -38,7 +38,7 @@ See the [http://code.google.com/p/gcmutils/wiki/ProjectSetup project setup page]
 Also see the [https://github.com/akquinet/android-archetypes android-gcm-quickstart archetype].
 
 == 2 Configuration ==
-By default GCMUtils uses a properties file called _gcmutils.properties_. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes the Context object as input (for example: _GCMUtils.createRegSender(context, regId)_).
+By default GCMUtils uses a properties file called _gcmutils.properties_. This should be placed in the assets folder of the projects. When this file is available you can use the GCMUtils-methods that takes a Context object as input (for example: _GCMUtils.createRegSender(context, regId)_).
 
 Available properties:
 {{{
