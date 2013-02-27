@@ -45,6 +45,7 @@ Or implement a server that can receive registration ids and send messages (see [
 The default request parameters have the following format (key=value):
   * regId=_`[`registration id`]`_
   * unregId=_`[`registration id`]`_
+  * email=_`[`email`]`_ (optional)
 <br/>
 *(Server code) receive registration id example:*
 {{{
