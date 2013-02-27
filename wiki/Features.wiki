@@ -69,7 +69,7 @@ GCMUtils.checkExtended(this);
 }}}
 There is no need to call GCMRegistrar.checkManifest again, since this is done by GCMUtils for you. When you are installing the app on real devices (not in development mode) you should only include the _GCMRegistrar.checkDevice_ method. Simply disable or remove the other checks.
 
-You can enable or disable the checkExtended in  _gcmutils.properties_ with the property: _check-extended=enabled/disabled_. If GCMUtils does not find the check-extended property, it will use the _ApplicationInfo.FLAG_DEBUGGABLE_. If it is set to debuggable check extended will be executed, if not it will be skipped. More info on _[http://stackoverflow.com/questions/7022653/how-to-check-programmatically-whether-app-is-running-in-debug-mode-or-not ApplicationInfo.FLAG_DEBUGGABLE]_.
+You can enable or disable the checkExtended in  _gcmutils.properties_ with the property: _check-extended=enabled/disabled_. If GCMUtils does not find the check-extended property, it will use the _`ApplicationInfo.FLAG_DEBUGGABLE`_. If it is set to debuggable check extended will be executed, if not it will be skipped. More info on _[http://stackoverflow.com/questions/7022653/how-to-check-programmatically-whether-app-is-running-in-debug-mode-or-not ApplicationInfo.FLAG_DEBUGGABLE]_.
  
 === 3.2 Registration id handling ===
 By default GCM does not provide support for handling the registration id, which needs to be sent from the Android client to the server. GCMUtils adds support for automatic registration id handling. This can be done in a number of ways, depending on your requirements.
