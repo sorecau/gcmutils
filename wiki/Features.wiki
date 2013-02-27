@@ -133,7 +133,7 @@ or
 {{{
 GCMUtils.createSender(context, new BasicNameValuePair("key1", "value1"), new BasicNameValuePair("key2", "value2"));
 }}}
-You can send is as many _BasicNameValuePair_ instances as you need. These will then be sent to the specified server.
+You can send is as many _`BasicNameValuePair`_ instances as you need. These will then be sent to the specified server.
 
 == 4 GCMUtilsBaseIntentService class==
 The GCMUtilsBaseIntentService adds a few helper methods to the standard _GCMBaseIntentService_ class offered by GCM.
