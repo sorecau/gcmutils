@@ -53,6 +53,7 @@ The default request parameters have the following format (key=value):
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
   String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
   String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
+  String email = request.getParameter(GCMUtilsConstants.PARAM_KEY_EMAIL);
   if (regIdParam != null) {
     logger.info("Received registration id: {}", regIdParam);
   }
