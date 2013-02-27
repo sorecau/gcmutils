@@ -19,7 +19,7 @@ To include the gcmutils-maven-plugin in your own project, add the following:
   <configuration>
     <manifestPath>my-folder/AndroidManifest.xml</manifestPath> <!-- Optional -->
     <skipBackup>true</skipBackup> <!-- Optional -->
-  <!-- <apiKey></apiKey> Should be included as System property or in settings.xml -->
+  <!-- <apiKey></apiKey> Should be included as System property or in .m2/settings.xml -->
   </configuration>
 </plugin>
 }}}
