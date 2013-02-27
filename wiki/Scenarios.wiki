@@ -40,7 +40,7 @@ public class GCMIntentService extends GCMUtilsBaseIntentService {
 Requires a bit more code than the simplest use case, but is still easy to set up.
 
   # Add _gcm-client-utils.jar_ and _gcm-common-utils.jar_ to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
-  # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
+  # Update the `AndroidManifest.xml` with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
   # In you main activity onCreate-method, add the following code:
 {{{
 GCMRegistrar.checkDevice(this);
@@ -92,7 +92,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 A more advanced case where you want to customize the content of the request sent during the registration and/or unregistration process. Additionally, you can register your own class to get a callback with the result of the requests sent.
 
   # Add _gcm-client-utils.jar_ and _gcm-common-utils.jar_ to the project (see [https://code.google.com/p/gcmutils/wiki/ProjectSetup project setup]).
-  # Update the AndroidManifest.xml with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
+  # Update the `AndroidManifest.xml` with the required information (see [http://developer.android.com/google/gcm/gs.html GCM Getting Started]).
   # In you main activity onCreate-method, add the following code:
 {{{
 GCMRegistrar.checkDevice(this);
