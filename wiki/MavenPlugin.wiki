@@ -1,0 +1,26 @@
+The gcmutils-maven-plugin provides two main features:
+  # Manifest generator
+  # Test server
+
+To include the gcmutils-maven-plugin in your own project, add the following:
+{{{
+<pluginRepositories>
+  <pluginRepository>
+    <id>gcmutils-pluginrepo-releases</id>
+    <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
+  </pluginRepository>
+</pluginRepositories>
+
+<plugin>
+  <groupId>net.jarlehansen.android.gcm.plugins</groupId>
+  <artifactId>gcmutils-maven-plugin</artifactId>
+  <version>LATEST_VERSION</version>
+  <configuration>
+    <manifestPath>my-folder/AndroidManifest.xml</manifestPath> <!-- Optional -->
+    <skipBackup>true</skipBackup> <!-- Optional -->
+  <!-- <apiKey></apiKey> Should be included as System property or in settings.xml -->
+  </configuration>
+</plugin>
+}}}
+
+----
