@@ -1,4 +1,6 @@
 #labels Featured
+=Maven Plugin=
+
 The gcmutils-maven-plugin provides two main features:
   # *[#Manifest_generator Manifest generator]*
   # *[#Test_server Test server]*
