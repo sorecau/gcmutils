@@ -4,7 +4,7 @@
 For more detailed information about standard GCM, see the 
 
   # Complete step 1, 2 and 3 in the [http://developer.android.com/google/gcm/gs.html GCM:Getting Started] guide.
-  # To automatically generate the required xml-tags in the `AndroidManifest.xml` file, either use the [http://code.google.com/p/gcmutils/wiki/ManifestGenerator#1._Maven_plugin gcmutils-maven-plugin] or [http://code.google.com/p/gcmutils/wiki/ManifestGenerator#2._Java_application download and run the Java application].
+  # To automatically generate the required xml-tags in the `AndroidManifest.xml` file, either use the [http://code.google.com/p/gcmutils/wiki/ManifestGenerator#1._Maven_plugin gcmutils-maven-plugin] or [http://code.google.com/p/gcmutils/wiki/ManifestGenerator#2._Java_application download and run the Java application]. Also, see the [https://github.com/akquinet/android-archetypes android-gcm-quickstart archetype].
   # [https://code.google.com/p/gcmutils/downloads/list Download jar-files] (gcm-client-utils and gcm-common-utils) or [https://code.google.com/p/gcmutils/wiki/ProjectSetup add them to your pom.xml].
   # In your main activity, add the following code:
 {{{
