@@ -62,9 +62,9 @@ If you want to skip the creation of the backup-file, add the system property `-D
 ----
 
 ==Test server==
-The gcmutils-maven-plugins provides a very simple test server for GCM. This makes it easy to test your application locally with a fully functional server implementation. It is also created to integrate with the GCMUtils client dependency.
+The gcmutils-maven-plugins provides a very simple test server for GCM. This makes it easy to test your application locally with a fully functional server implementation. It is also created to integrate with the GCMUtils client library.
 
-The test server will offer registration/unregistration service (storing the regIds in memory), and provide a webpage that makes it easy to send test messages to the devices.
+The test server offers registration/unregistration service (storing the regIds in memory) and provides a webpage that makes it easy to send test messages to the devices.
 
 To start the test server execute the following command:
 {{{
