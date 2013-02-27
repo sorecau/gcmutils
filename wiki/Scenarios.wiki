@@ -110,7 +110,7 @@ else {
   sender.send();
 }
 }}}
-  # Create your own callback class (in the above code its called _MyCallback_) and implement the _GCMSenderCallback_:
+  # Create your own callback class (in the above code its called _`MyCallback`_) and implement the _GCMSenderCallback_:
 {{{
 public class MyCallback implements GCMSenderCallback {
   @Override
