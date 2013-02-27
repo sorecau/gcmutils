@@ -10,7 +10,7 @@ For more detailed information about standard GCM, see the
 {{{
 GCMRegistrar.checkDevice(this);
 GCMUtils.checkExtended(this);
-GCMUtils.getAndSendRegistrationId(this);
+GCMUtils.getAndSendRegId(this);
 }}}
   # Add _gcmutils.properties_ in the assets folder and add the _receiver-url_, sender-id and check-extended:
 {{{
