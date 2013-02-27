@@ -1,7 +1,7 @@
 #labels Featured
 The gcmutils-maven-plugin provides two main features:
-  # Manifest generator
-  # Test server
+  # *[#Manifest_generator Manifest generator]*
+  # *[#Test_server Test server]*
 
 To include the gcmutils-maven-plugin in your own project, add the following:
 {{{
@@ -28,13 +28,14 @@ To include the gcmutils-maven-plugin in your own project, add the following:
 
 ==Manifest generator==
 
-One of the more error-prone and tedious tasks when creating a GCM project is to add the correct manifest entries. The GCMUtils AndroidManifest generator is created to make this process fast and simple.
+One of the more error-prone and tedious tasks when creating a GCM project is to add the correct manifest entries. The GCMUtils `AndroidManifest` generator is created to make this process fast and simple.
 
 The manifest generator automatically generates the required manifest entries for a GCM app. By running either the maven plugin or the Java application, it will scan your existing `AndroidManifest.xml` file and add the missing tags.
 
 There are two main ways to use the manifest generator:
-  * Maven plugin
-  * Java application 
+  * [#Manifest_generator_maven_plugin Maven plugin]
+  * [#Manifest_generator_Java_application Java application]
+ 
 
 ===Manifest generator maven plugin===
 Execute the following command to run the plugin:
