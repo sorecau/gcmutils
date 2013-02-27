@@ -25,7 +25,7 @@ GCMUtils was created to make it easier to use GCM. It works in combination with 
   * *[#3.2.2_Custom_request_parameters 3.2.2 Custom request parameters]*
   * *[#4_GCMUtilsBaseIntentService_class 4 GCMUtilsBaseIntentService class]*
   * *[#5_Receiving_server 5 Receiving server]*
-  * *[#6_GCMUtils_manifest_generator 6 GCMUtils AndroidManifest generator]*
+  * *[#6_GCMUtils_maven_plugin 6 GCMUtils maven plugin]*
   * *[#7_Source_code 7 Source code]*
 
 ----
@@ -145,8 +145,8 @@ String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
 For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
-== 6 GCMUtils manifest generator ==
-The GCMUtils manifest generator can automatically generate the required manifest entries for a GCM app. [http://code.google.com/p/gcmutils/wiki/ManifestGenerator More info].
+== 6 GCMUtils maven plugin ==
+The gcmutils-maven-plugin provides two main features: 1) manifest generator and 2) test server. [https://code.google.com/p/gcmutils/wiki/MavenPlugin More info].
 
 == 7 Source code ==
 The source code is available at github: [https://github.com/jarlehansen/gcmutils]
