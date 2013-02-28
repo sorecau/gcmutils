@@ -79,9 +79,6 @@ The gcmutils-maven-plugins provides a very simple test server for GCM. This make
 
 The test server offers registration/unregistration service (storing the regIds in memory) and provides a webpage that makes it easy to send test messages to the devices.
 
-<a href="http://tinypic.com?ref=9lfnzc" target="_blank"><img src="http://i49.tinypic.com/9lfnzc.png" border="1" alt="Image and video hosting by TinyPic"/>
-
-
 To start the test server execute the following command:
 {{{
 mvn gcmutils:run-server
@@ -91,3 +88,7 @@ mvn gcmutils:run-server
 || *apiKey* || The API key is created in [https://code.google.com/apis/console/ Google APIs console] and is used when sending messages to the registered devices.<br/>It is recommended to add the apiKey value to either a system property when running the command (_gcmutils:run-server `-DapiKey`=_) or in the _.m2/settings.xml_ file.<br/>See the [http://developer.android.com/google/gcm/gs.html#create-proj GCM Getting Started guide] for more information on how to generate the API key. ||
 || *port* || The port number that the server will run on. Default: 9595 ||
 || *contextRoot* || The context root of the webapp. Default: "/" ||
+
+
+*Test server webpage:*
+<a href="http://tinypic.com?ref=9lfnzc" target="_blank"><img src="http://i49.tinypic.com/9lfnzc.png" border="1" alt="Image and video hosting by TinyPic"/>
