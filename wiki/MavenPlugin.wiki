@@ -89,6 +89,6 @@ mvn gcmutils:run-server
 || *port* || The port number that the server will run on. Default: 9595 ||
 || *contextRoot* || The context root of the webapp. Default: "/" ||
 
-
+<br/>
 *Test server webpage:*
 <a href="http://tinypic.com?ref=9lfnzc" target="_blank"><img src="http://i49.tinypic.com/9lfnzc.png" border="1" alt="Image and video hosting by TinyPic"/>
