@@ -79,6 +79,8 @@ The gcmutils-maven-plugins provides a very simple test server for GCM. This make
 
 The test server offers registration/unregistration service (storing the regIds in memory) and provides a webpage that makes it easy to send test messages to the devices.
 
+<a href="http://tinypic.com?ref=9lfnzc" target="_blank"><img src="http://i49.tinypic.com/9lfnzc.png" border="0" alt="Image and video hosting by TinyPic"></a>
+
 To start the test server execute the following command:
 {{{
 mvn gcmutils:run-server
