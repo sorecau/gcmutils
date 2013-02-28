@@ -7,6 +7,12 @@ The gcmutils-maven-plugin provides two main features:
 
 To include the gcmutils-maven-plugin in your own project, add the following:
 {{{
+<repositories>
+  <repository>
+    <id>gcmutils-repo-releases</id>
+    <url>http://gcmutils.googlecode.com/svn/trunk/repository/releases</url>
+  </repository>
+</repositories>
 <pluginRepositories>
   <pluginRepository>
     <id>gcmutils-pluginrepo-releases</id>
