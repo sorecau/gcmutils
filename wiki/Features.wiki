@@ -157,7 +157,10 @@ If you are writing your server in Java, you can add the gcm-commons-utils depend
 String regIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_REGID);
 String unregIdParam = request.getParameter(GCMUtilsConstants.PARAM_KEY_UNREGID);
 }}}
-For more information on the server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
+
+[https://code.google.com/p/gcmutils/wiki/MavenPlugin#Test_server Click here] for information on the test server that is available in the GCMUtils maven plugin.
+
+For more information on the general server implementation, see [http://developer.android.com/google/gcm/gs.html#server-app the GCM documentation].
 
 == 6 GCMUtils maven plugin ==
 The gcmutils-maven-plugin provides two main features: 1) [https://code.google.com/p/gcmutils/wiki/MavenPlugin#Manifest_generator manifest generator] and 2) [https://code.google.com/p/gcmutils/wiki/MavenPlugin#Test_server test server]. Click [https://code.google.com/p/gcmutils/wiki/MavenPlugin here] for more information.
